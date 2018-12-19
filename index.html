@@ -1,0 +1,81 @@
+<html>
+
+<head>
+	 <!-- Link to d3 -->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+	<html>
+<title> Boston Landmarks Map </title>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css' rel='stylesheet'/>
+<link rel="stylesheet" href="map.css">
+</head>
+
+<body>
+	<!-- Map sidebar --> 
+  <div id="sidebar">
+    <div id="chapters"></div></div>
+ <div class='name' id="Name1"><h1>Boston Landmark</h1></div>
+ <!-- The map will be added to this div by javascript --> 
+  <div id="map-parent">
+    <div id="map"></div>
+ 
+
+  <!-- Load font awesome icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+
+  <!-- About this map button -->
+<div id="about" class='button-default'>
+<a href="#" id="about">About This Map</a></div>
+
+
+<div class='modal'>
+	<h2 class='modal-title'>about this project</h2>
+	<div class='modal-body'><p>Boston is the capital and most populous municipality of the Commonwealth of Massachusetts in the United States. The city proper covers 48 square miles with an estimated population of 685,094.</p><p>Perhaps more than any other city in the USA, Boston is home to a multitude of famous landmarks with historical significance.This map is about all landmarks in Boston.</p><p>For questions, contact <a href='mailto:wl2pc@virginia.edu'>wl2pc@virginia.edu</a></div>
+
+	<button class='close-button'>&times;</button>
+	</div>
+	<div id='screen'></div>
+	<div class='Landmark-image' id='img' src='img'>
+	</div>
+	
+</div>
+</div>
+
+<!-- Map legend (populated by javascript code) -->
+	<div class='map-overlay' id='legend'></div>
+
+	
+<!-- Info window (populated by javascript code from the Mapbox map layers) -->
+	
+</div>
+<button id="reset" class='button-default'><i class="fas fa-redo"></i></i>&nbsp; Reset map</button>
+ <!-- Layers control (populated by javascript code) -->
+  <div id='layers-control'></div>
+
+<!-- Time slider -->   
+    <div id="slidercontainer">
+      	<h4>Landmark Built Timeline:</h4>
+      	<input type="range" min="1890" max="2018" value="2018" class="slider" id="timeslider">
+      	<div id="timeline-labels"></div> <!-- populated by d3 -->
+    	<svg width="500" height="25"></svg>
+    </div>
+
+
+
+
+
+</body>
+<!-- Link to our custom javascript, must be placed at the end of the index.html file -->  
+<script src="map.js"></script>
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>;
+

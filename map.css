@@ -1,0 +1,285 @@
+
+body {
+    font-family: 'Allerta Stencil', sans-serif;;
+margin: 0;
+padding: 0;
+}
+
+.name {
+	position: absolute;
+	top: 30px;
+	left: 10px;
+	font-size: 15px;
+    opacity: 0.6;
+    color: deeppink;
+    z-index: 3}
+
+#map {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 85%;	/* 100% of viewport width */
+	height: 100vh;	/* 100% of viewport height */
+}
+
+#sidebar {
+    position: absolute;
+    left: 0;
+    width: 15%;
+    height: 100vh;
+    background-color: #fff0f5;
+    opacity: 0.4;
+    z-index:1;
+}
+
+
+
+}#chapters>.chapter {
+    margin-bottom: 50px;
+    font-family: Courier;
+}
+
+#chapters>.chapter>img {
+    width: 100%;
+}
+
+/* model styles*/
+#screen{
+	position: absolute;
+	width:100vw;
+	height:100vh;
+    background-color:black;
+    opacity: 0.6;
+    z-index: 1;
+    display:none;
+}
+.modal{
+	display: none;
+	width: 40vw;
+	height: 40vh;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom:0;
+    left: 0;
+    right: 0;
+	background-color: white;
+	z-index: 2;
+	padding: 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+    opacity:0.8;
+
+}
+
+
+.modal>.modal-title{
+    z-index: 5;
+    padding: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.modal>.modal-body{
+font-family: 'Source Sans Pro', sans-serif;
+	
+}
+
+.modal>.close-button{
+	color: #cccccc;
+	position: absolute;
+	right: 0;
+	top:0;
+	margin: 10px;
+	background: none !important;
+    border: none !important;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+
+}
+.modal>.close-button:hover {
+    color: #bbbbbb !important;
+
+}
+
+
+
+#about a {
+    position: absolute; /* Position them relative to the browser window */
+    top: -45px;
+    transition: 0.3s; /* Add transition on hover */
+    padding: 20px; /* 15px padding */
+    width: 190px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+background-color: deeppink;
+z-index: 5;
+}
+
+#about a:hover {
+    top: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+
+
+.map-overlay{
+	position: absolute;
+	background: rgba(255,255,255,0.8);
+	margin: 20px;
+	font-family: courier;
+	border-radius:10px;
+	padding: 10px;
+	z-index: 1000;
+
+}
+
+#legend{
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 15px;
+    color: #696969;
+	top:0;
+	right: 0;
+	position:absolute; 
+
+}
+
+.legend-key{
+	display: inline-block;
+	border-radius: 100%;
+	width: 10px;
+	height: 10px;
+	margin-right: 5px;
+}
+#info-window {
+   bottom: 0;
+    right: 10px;
+   
+    width: 20vw;
+}
+
+.mapboxgl-popup-content {
+    font-family: 'Oswald', sans-serif;;
+    background-color: #dcdcdc;
+}
+.mapboxgl-popup-tip {
+    border-top-color: rgba(255, 174, 218, 0.9) !important;
+}
+
+.Landmark-image {
+    width: 300px;
+    height: 200px;
+}
+
+#layers-control {
+    position: absolute;
+    z-index: 1;
+   bottom: 0;
+    left: 10px;
+    margin: 20px;
+    width: 120px;
+}
+
+#layers-control a {
+    font-size: 13px;
+    color: white;
+    display: block;
+    margin: 0 0 5px 0;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
+    background-color: #ccc;
+}
+
+#layers-control a:last-child {
+    border: none;
+}
+
+#layers-control a:hover {
+    background-color: #9C27B0;
+}
+
+#layers-control a.active {
+    background-color: deeppink;
+    color: #ffffff;
+}
+
+#layers-control a.active:hover {
+    background: #9C27B0;
+}
+
+#reset {
+    position: absolute;
+    z-index: 20;
+    left: 10px;
+    margin: 20px;
+    width: 80px;
+    right: 10px;
+    background-color: #ffd000;
+    color: deeppink;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/* Map Area content */
+
+    /* Slider */
+    #slidercontainer {
+        bottom: 30px;
+        left: 500px;
+        position: absolute;
+        width: 65%;
+    }
+
+    #slidercontainer h4 { margin: 0 0 0 5px; }
+    
+    .slider {
+        -webkit-appearance: none;
+        width: 500px;
+        height: 25px;
+        background: #ffffff;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+    #timeline-labels{
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 15px;
+    color: #696969;
+    position:absolute; 
+
+}
+
+    .slider:hover {
+        opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: deeppink;
+        cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: #4CAF50;
+        cursor: pointer;
+    }
+
+#timeline-labels .domain, #timeline-labels .tick>line { display: none; }
+    #timeline-labels text { 
+        fill: deeppink; 
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 14px;
+    }
+
